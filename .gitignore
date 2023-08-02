@@ -38,10 +38,5 @@ opencvCode
 cudaCode
 opencv
 
-src/basicFunctionalities
-src/functions
-src/itr_algo
-src/loops
-src/pointer_ref
 examples/googleMinimumDist.cpp
 old/

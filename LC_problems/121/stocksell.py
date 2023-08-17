@@ -2,7 +2,6 @@
 # Easy
 
 # 2 pointers
-
 def maxProfit(prices):
     left, right = 0, 0
     maxP = 0

@@ -1,6 +1,7 @@
 # 1768. Merge Strings Alternately
-# https://leetcode.com/problems/merge-strings-alternately
+# Easy
 
+# This code takes in two strings and concatenates them alternately. If one string is longer than the other, the remaining letters of the longer string are added to the end of the new string. If both strings are equal in length, the new string will be the two input strings concatenated alternately.
 
 def mergeAlternately(word1, word2):
     newWord = ""
@@ -28,13 +29,9 @@ def mergeAlternately(word1, word2):
     else:
         return ""
 
-
-def main():
+if __name__ == "__main__":
     print(mergeAlternately("abc", "pqr"))
     print(mergeAlternately("ab", "pqrs"))
     print(mergeAlternately("abcd", "pq"))
     print(mergeAlternately("abcde", "pqr"))
     print(mergeAlternately("abcd", "pqrs"))
-
-if __name__ == "__main__":
-    main()

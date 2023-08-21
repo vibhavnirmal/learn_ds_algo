@@ -17,7 +17,6 @@ def productExceptSelf(nums):
     
 
 # 08/07/2023
-# Did it in first try: A bit proud moment.. took almost 20 minutes | But using Div Operation
 
 # Runtime: Beats 88.22%of users with Python3
 # Memory: Beats 99.85%of users with Python3
@@ -47,5 +46,5 @@ def productExceptSelf(nums):
 #     return nums
 
 print(productExceptSelf(nums = [1,2,3,4]))
-# print(productExceptSelf(nums = [-1,1,0,-3,3]))
-# print(productExceptSelf(nums = [-1,1,0,-3,3,0]))
+print(productExceptSelf(nums = [-1,1,0,-3,3]))
+print(productExceptSelf(nums = [-1,1,0,-3,3,0]))

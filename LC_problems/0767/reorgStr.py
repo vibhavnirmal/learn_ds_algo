@@ -32,18 +32,32 @@ s consists of lowercase English letters.
 
 
 from collections import Counter
+import heapq
 
 def reorganizeString(s):
     # Count values
     myHash = Counter(s)
 
-    if max(myHash.values()) > (len(s) + 1)//2:
-        return ""
+    if max(myHash.values()) > (len(s) + 1)//2: return ""
 
-    res = []
+    maxHeap = [[-cnt, val] for val, cnt in myHash.items()]
+    heapq.heapify(maxHeap)
 
-    
-    
+    prev = None
+    res = ""
+
+    while maxHeap or prev:
+        cnt, char = heapq.heappop(maxHeap)
+        res += char
+        cnt += 1
+
+        if prev:
+            heapq.heappush(maxHeap, prev)
+            prev = None
+
+        if cnt != 0:
+            prev = [cnt, char]
+
     return res
 
 print(reorganizeString(s = "aab"))
